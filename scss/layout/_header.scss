@@ -1,0 +1,187 @@
+.header-parent {
+  background-color: $secondary-black-color;
+  margin-bottom: 20rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary-black-color;
+  width: 100%;
+  height: 73rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16.5rem;
+  padding-right: 16.5rem;
+
+  background-image: url("../../images/png/hero-headphones.png");
+  background-repeat: no-repeat;
+  background-position: calc(50% + 25rem) calc(50%);
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 111rem;
+    padding-top: 3.2rem;
+    padding-bottom: 3.6rem;
+
+    .header__logo-btn {
+      display: flex;
+      gap: 4rem;
+    }
+    .bar-btn {
+      background: 0;
+      border: 0;
+      display: none;
+    }
+
+    .logo {
+      display: flex;
+    }
+
+    .header__site-nav {
+      padding-right: 10rem;
+    }
+
+    .header__sitenav__list {
+      display: flex;
+      margin-right: auto;
+      gap: 3.2rem;
+    }
+
+    .header__sitenav__item {
+      color: $secondary-white-color;
+      font-size: $sub-tytle-s;
+      line-height: $sub-tytle-lh;
+      letter-spacing: $sub-tytle-lt-2;
+      transition: 0.3s ease color;
+
+      &:hover {
+        color: $primary-orange-color;
+      }
+    }
+  }
+  .hr {
+    width: 100%;
+    max-width: 111rem;
+    height: 0.01rem;
+    flex-shrink: 0;
+    opacity: 0.2;
+    background: $secondary-white-color;
+  }
+  .header-content {
+    position: absolute;
+    left: -55.5rem;
+    top: 12.8rem;
+    .header-overline {
+      font-weight: $overline-fw;
+      line-height: $overline-lh;
+      letter-spacing: $overline-lt;
+      font-size: $overline-s;
+      color: $secondary-white-color;
+      opacity: 0.4964;
+      padding-bottom: 2.4rem;
+    }
+    .heading-1 {
+      color: $secondary-white-color;
+      font-size: $h1-size;
+      line-height: $h1-lh;
+      letter-spacing: $h1-lt;
+      font-weight: 700;
+      text-transform: uppercase;
+      width: 39.6rem;
+      padding-bottom: 2.4rem;
+    }
+    .header-paragraph {
+      color: $secondary-white-color;
+      font-family: Manrope;
+      font-size: $p-s;
+      line-height: $p-lh;
+      font-weight: $ff-w-500;
+      font-style: normal;
+      opacity: 0.75;
+      width: 34.9rem;
+      padding-bottom: 4rem;
+    }
+    .header-orange-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 16rem;
+      height: 4.8rem;
+      font-size: $sub-tytle-s;
+      line-height: $sub-tytle-lh;
+      letter-spacing: $sub-tytle-lt;
+      color: $secondary-white-color;
+      background-color: $primary-orange-color;
+      font-family: $body-ff;
+      font-weight: $ff-w-700;
+      text-transform: uppercase;
+      transition: 0.3s ease background-color;
+      &:hover {
+        background-color: $secondary-light-orange-color;
+      }
+    }
+  }
+}
+.header-content-parent {
+  position: relative;
+}
+//
+// responsive header:
+//
+
+@media screen and (max-width: 1440px) {
+  .header-content {
+    position: absolute !important;
+    left: -20rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .header {
+    background-image: url("../../images/png/hero-headphones-with-opacity.png");
+    // linear-gradient(rgba(1, 0, 1, 0.75), rgba(1, 0, 1, 0.75)),
+    background-position: bottom -13rem center;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .header,
+  .container {
+    padding: 4rem;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .header-parent {
+    margin-bottom: 10rem;
+  }
+
+  .header__site-nav {
+    display: none;
+  }
+  .bar-btn {
+    display: inline-block !important;
+  }
+  .header {
+    background-size: 600px 600px;
+    background-position: bottom 5rem center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .heading-1 {
+    font-size: $h2-size !important;
+    line-height: $h2-lh !important;
+  }
+  .header-overline {
+    padding-bottom: 1.6rem !important;
+  }
+  .header-paragraph {
+    width: 32.8rem !important;
+  }
+}
